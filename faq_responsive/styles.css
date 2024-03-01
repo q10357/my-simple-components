@@ -1,6 +1,5 @@
 body, html {
   background: #111;
-  color: white;
   font-family: 'Roboto', sans-serif;
 }
  
@@ -43,3 +42,29 @@ section {
   box-shadow: .5rem 2px .5rem rgba(0,0,0,.1);
 }
 
+.accordion-link {
+  font-size: 1.6rem;
+  color: rgba(255,255,255,.8);
+  text-decoration: none;
+  background-color: #283042;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.accordion-link ion-icon{
+  color: #e7d5ff;
+  padding: 0.5rem;
+}
+
+.accordion-link ion-icon[name="remove"] {
+  display: none;
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  position: relative;
+  background-color: #212838;
+}
