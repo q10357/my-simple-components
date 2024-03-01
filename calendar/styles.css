@@ -1,0 +1,80 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+  }
+/* Responsive adjustments for screens narrower than 768px */
+  @media (max-width: 768px) {
+    th, td {
+      padding: 12px; /* Smaller padding for smaller screens */
+    }
+
+    tr {
+      height: 60px; /* Adjusted height for medium screens */
+    }
+
+    /* Optional: Adjust font size for smaller screens */
+    th, td {
+      font-size: 14px; /* Adjust font size as needed */
+    }
+  }
+
+  /* Further adjustments for even smaller screens, if necessary */
+  @media (max-width: 480px) {
+    th, td {
+      padding: 10px; /* Even smaller padding for very small screens */
+    }
+
+    tr {
+      height: 60px; /* Adjusted height for small screens */
+    }
+
+    /* Optional: Further reduce font size for very small screens */
+    th, td {
+      font-size: 12px; /* Adjust font size as needed */
+    }
+  }
+  table {
+    width: 100%; /* Make table width 100% of container width */
+    border-collapse: collapse;
+    background: white;
+    color: black;
+  }
+
+  th, td {
+    width: 14.28%; /* Equal width for 7 columns */
+    border: 1px solid #ddd; /* Optional: adds border to cells */
+    padding: 5px; /* Adds some padding around the content */
+    text-align: left; /* Aligns text to the left */
+    vertical-align: top; /* Aligns content to the top */
+}
+
+.event-day {
+    background-color: #f0e5ff; /* Soft lavender, for example */
+    border-radius: 5px; /* Optional: adds a gentle rounded corner */
+    padding: 2px; /* Keeps the content neatly contained */
+}
+
+.event-day::before {
+    content: '★'; /* Example: Star icon */
+    color: #a29bfe; /* Soft purple, for elegance */
+    font-size: 10px; /* Small size for subtlety */
+    margin-right: 5px; /* Spacing between the icon and the date */
+}
+
+.weekdays {
+    height: fit-content;
+}
+.event-day {
+    color: #6c5ce7; /* A soft but distinct color */
+    font-style: italic; /* Adds a stylish emphasis */
+}
+
+  /* Adjusts each td to have flexible height */
+  tr {
+    /* Removed the fixed height to allow content to determine row height */
+height: 100px;
+
+  }
