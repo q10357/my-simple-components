@@ -1,176 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Dropdown FAQ</title>
   </head>
   <body>
-    <h1>Oppstart i august</h1>
-    <p>&nbsp;</p>
-    <table cellspacing="50" cellpadding="50" bgcolor="lightgrey">
-      <thead>
-        <tr class="weekdays">
-          <th>Sun</th>
-          <th>Mon</th>
-          <th>Tue</th>
-          <th>Wed</th>
-          <th>Thu</th>
-          <th>Fri</th>
-          <th>Sat</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>1</td>
-          <td>2</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>4</td>
-          <td title="hey">5</td>
-          <td>6</td>
-          <td>7</td>
-          <td>8</td>
-          <td>9</td>
-        </tr>
-        <tr>
-          <td>10</td>
-          <td>11</td>
-          <td>12</td>
-          <td>13</td>
-          <td>14</td>
-          <td>15</td>
-          <td>16</td>
-        </tr>
-        <tr>
-          <td>17</td>
-          <td>18</td>
-          <td>19</td>
-          <td>20</td>
-          <td>21</td>
-          <td>22</td>
-          <td>23</td>
-        </tr>
-        <tr>
-          <td>24</td>
-          <td>25</td>
-          <td>26</td>
-          <td>27</td>
-          <td>28</td>
-          <td>29</td>
-          <td>30</td>
-        </tr>
-        <tr>
-          <td>31</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-          // Assuming each day is correctly placed in the table and "5" uniquely identifies the 5th of the month
-          var days = document.querySelectorAll('td');
-          days.forEach(function(day) {
-              if (day.textContent.trim() === '5') {
-                  day.classList.add('event-day');
-              }
-          });
-      });
-      </script>
-
-      <style>
-        body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    background: black;
-  }
-/* Responsive adjustments for screens narrower than 768px */
-  @media (max-width: 768px) {
-    th, td {
-      padding: 12px; /* Smaller padding for smaller screens */
-    }
-
-    tr {
-      height: 60px; /* Adjusted height for medium screens */
-    }
-
-    /* Optional: Adjust font size for smaller screens */
-    th, td {
-      font-size: 14px; /* Adjust font size as needed */
-    }
-  }
-
-  /* Further adjustments for even smaller screens, if necessary */
-  @media (max-width: 480px) {
-    th, td {
-      padding: 10px; /* Even smaller padding for very small screens */
-    }
-
-    tr {
-      height: 60px; /* Adjusted height for small screens */
-    }
-
-    /* Optional: Further reduce font size for very small screens */
-    th, td {
-      font-size: 12px; /* Adjust font size as needed */
-    }
-  }
-  table {
-    width: 100%; /* Make table width 100% of container width */
-    border-collapse: collapse;
-    background: white;
-    color: black;
-  }
-
-  th, td {
-    width: 14.28%; /* Equal width for 7 columns */
-    border: 1px solid #ddd; /* Optional: adds border to cells */
-    padding: 5px; /* Adds some padding around the content */
-    text-align: left; /* Aligns text to the left */
-    vertical-align: top; /* Aligns content to the top */
-}
-
-.event-day {
-    background-color: #f0e5ff; /* Soft lavender, for example */
-    border-radius: 5px; /* Optional: adds a gentle rounded corner */
-    padding: 2px; /* Keeps the content neatly contained */
-}
-
-.event-day::before {
-    content: '★'; /* Example: Star icon */
-    color: #a29bfe; /* Soft purple, for elegance */
-    font-size: 10px; /* Small size for subtlety */
-    margin-right: 5px; /* Spacing between the icon and the date */
-}
-
-.weekdays {
-    height: fit-content;
-}
-.event-day {
-    color: #6c5ce7; /* A soft but distinct color */
-    font-style: italic; /* Adds a stylish emphasis */
-}
-
-  /* Adjusts each td to have flexible height */
-  tr {
-    /* Removed the fixed height to allow content to determine row height */
-height: 100px;
-
-  }
-      </style>
-
+    <section>
+      <div class="container">
+        <div class="accordion">
+          <!--
+             Item one, if in need of more items, 
+             be sure to copy 'accordion-item' and insert 
+             inside the 'accordion' div, this is important,
+             as each item needs their class names to be 
+             styled appropriately
+          -->
+          <div class="accordion-item" id="question1">
+            <a class="accordion-link" href="#question1">
+              How often do you go to the beach?
+              <ion-icon name="add"></ion-icon>
+              <ion-icon name="remove"></ion-icon>
+            </a>
+            <div class="answer">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+              urna felis, viverra elementum sapien quis, iaculis finibus nunc.
+              Pellentesque condimentum libero eu mauris aliquet, vitae egestas
+              nisl aliquet. Pellentesque consectetur ultricies mauris, sed
+              vulputate urna dictum quis. Nam posuere pulvinar consequat. Nunc
+              tellus eros, dignissim ut volutpat eget, bibendum sit amet lacus.
+              Vivamus vel lacinia neque. Phasellus erat est, accumsan eget nisi
+              et, auctor tristique mi. Integer molestie eu urna et tristique.
+              Nunc luctus sodales congue. Aliquam commodo elementum massa nec
+              feugiat. Integer nec rutrum ligula. Aliquam faucibus, ipsum et
+              condimentum cursus, nisl lorem dignissim metus, at sagittis velit
+              massa ut odio. Proin quis posuere tortor. Aliquam ultrices, eros
+              in scelerisque pulvinar, elit nulla condimentum tellus, ac laoreet
+              ipsum enim ut lacus. Fusce vel elit eu justo maximus consectetur
+              eget a justo. Curabitur ut gravida ipsum.
+            </div>
+          </div>
+          <div class="accordion-item" id="question2">
+            <a class="accordion-link" href="#question2">
+              How often do you walk the dog??
+              <ion-icon name="add"></ion-icon>
+              <ion-icon name="remove"></ion-icon>
+            </a>
+            <div class="answer">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+              urna felis, viverra elementum sapien quis, iaculis finibus nunc.
+              Pellentesque condimentum libero eu mauris aliquet, vitae egestas
+              nisl aliquet. Pellentesque consectetur ultricies mauris, sed
+              vulputate urna dictum quis. Nam posuere pulvinar consequat. Nunc
+              tellus eros, dignissim ut volutpat eget, bibendum sit amet lacus.
+              Vivamus vel lacinia neque. Phasellus erat est, accumsan eget nisi
+              et, auctor tristique mi. Integer molestie eu urna et tristique.
+              Nunc luctus sodales congue. Aliquam commodo elementum massa nec
+              feugiat. Integer nec rutrum ligula. Aliquam faucibus, ipsum et
+              condimentum cursus, nisl lorem dignissim metus, at sagittis velit
+              massa ut odio. Proin quis posuere tortor. Aliquam ultrices, eros
+              in scelerisque pulvinar, elit nulla condimentum tellus, ac laoreet
+              ipsum enim ut lacus. Fusce vel elit eu justo maximus consectetur
+              eget a justo. Curabitur ut gravida ipsum.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>
-
