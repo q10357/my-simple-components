@@ -1,1 +1,1 @@
-Some components with angularjs + bootstrap v3
+Lightweight fun with html, scss & css and vanilla javascript
