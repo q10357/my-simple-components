@@ -1,5 +1,5 @@
 body, html {
-  background: #111;
+  background: #12122f;
   font-family: 'Roboto', sans-serif;
 }
  
@@ -46,6 +46,7 @@ section {
   font-size: 1.6rem;
   color: rgba(255,255,255,.8);
   text-decoration: none;
+  padding: 0.8rem;
   background-color: #283042;
   width: 100%;
   display: flex;
@@ -62,9 +63,44 @@ section {
   display: none;
 }
 
+/* Hide the answer until user expands */
 .answer {
   max-height: 0;
   overflow: hidden;
   position: relative;
   background-color: #212838;
+  transition: max-height 650ms;
+}
+ 
+/* Some styling, add a line next to expanded item to display pop of color */
+.answer::before {
+  content: "";
+  position: absolute;
+  width: .6rem;
+  height: 90%;
+  background-color: #8fc460;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 1.4rem;
+  color: rgba(255,255,255, .6);
+}
+
+.answer p {
+  font-size: 1.4rem;
+  color: rgba(255,255,255, .6);
+  padding: 2rem;
+}
+
+/* When icon clicked, accordion-item's child element should display */
+.accordion-item:target .answer{
+  max-height: 20rem;
+}
+
+.accordion-item:target .accordion-link ion-icon[name="add"]{
+  display: none;
+}
+
+.accordion-item:target .accordion-link ion-icon[name="remove"]{
+  display: block;
 }
